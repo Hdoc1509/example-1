@@ -1,17 +1,3 @@
-<?php
-
-// Desactivar toda notificación de error
-error_reporting(0);
-
-$n1 = $_POST['Nota1'];
-$n2 = $_POST['Nota2'];
-$n3 = $_POST['Nota3'];
-$n4 = $_POST['Nota4'];
-
-$p = ($n1+$n2+$n3+$n4)/4;
-
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
