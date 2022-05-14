@@ -1,0 +1,11 @@
+{
+  "extends": "stylelint-config-standard",
+  "ignoreFiles": [
+    "**/*.html"
+  ],
+  "rules": {
+    "block-closing-brace-newline-before": "always",
+    "comment-whitespace-inside": "never",
+    "selector-attribute-quotes": "never"
+  }
+}
