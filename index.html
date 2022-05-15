@@ -18,155 +18,169 @@
 
 <h1>Ejercicios Operadores</h1>
 
-<form action="">
+<form id="ej1">
 	<fieldset>
 		<legend>Ejercicio 1</legend>
 
-		<label for="nota1">Nota 1</label>
-		<input type="text" id="nota1">
+		<span>Nota 1</span>
+		<input type="number" name="nota1" min="0" max="20" required>
 
-		<label for="nota2">Nota 2</label>
-		<input type="text" id="nota2">
+		<span>Nota 2</span>
+		<input type="number" name="nota2" min="0" max="20" required>
 
-		<label for="nota3">Nota 3</label>
-		<input type="text" id="nota3">
+		<span>Nota 3</span>
+		<input type="number" name="nota3" min="0" max="20" required>
 
-		<button type="button" id="calculo1">Calcular</button>
+		<input type="submit" value="Calcular">
 
-		<label for="resultado2">Resultado</label>
-		<input type="text" id="resultado1" readonly>
+		<span>Resultado</span>
+		<input type="number" name="resultado1" readonly>
 	</fieldset>
+</form>
 
+<form id="ej2">
 	<fieldset>
 		<legend>Ejercicio 2</legend>
 
-		<label for="horasSemanales">Horas semanales</label>
-		<input type="text" id="horasSemanales">
+		<span>Horas semanales</span>
+		<input type="number" name="horasSemanales" max="48" required>
 
-		<label for="horas">Pago por Hora</label>
-		<input type="text" id="horas">
+		<span>Pago por Hora</span>
+		<input type="number" name="horas" min="8" required>
 
-		<button type="button" id="calculo2">Calcular</button>
+		<input type="submit" value="Calcular">
 
-		<label for="salarioSemanal">Salario Semanal</label>
-		<input type="text" id="salarioSemanal" readonly>
+		<span>Salario Semanal</span>
+		<input type="number" name="salarioSemanal" readonly>
 	</fieldset>
+</form>
 
+<form id="ej3">
 	<fieldset>
 		<legend>Ejercicio 3</legend>
 
-		<label for="guillermo">Guillermo</label>
-		<input type="text" id="guillermo">
+		<span>Guillermo</span>
+		<input type="number" name="guillermo" required>
 
-		<button type="button" id="calculo3">Calcular</button>
+		<input type="submit" value="Calcular">
 
-		<label for="luis">Luis</label>
-		<input type="text" id="luis" readonly>
+		<span>Luis</span>
+		<input type="number" name="luis" readonly>
 
-		<label for="juan">Juan</label>
-		<input type="text" id="juan" readonly>
+		<span>Juan</span>
+		<input type="number" name="juan" readonly>
 
-		<label for="total">Total</label>
-		<input type="text" id="total" readonly>
+		<span>Total</span>
+		<input type="number" name="total" readonly>
 	</fieldset>
+</form>
 
+<form id="ej4">
 	<fieldset>
 		<legend>Ejercicio 4</legend>
 
-		<label for="carrosVendidos">Carros Vendidos</label>
-		<input type="text" id="carrosVendidos">
+		<span>Carros Vendidos</span>
+		<input type="number" name="carrosVendidos" min="1" required>
 
-		<label for="valorVentaCarro">Valor de Venta del Carro</label>
-		<input type="text" id="valorVentaCarro">
+		<span>Valor de Venta del Carro</span>
+		<input type="number" name="valorVentaCarro" required>
 
-		<button type="button" id="calculo4">Calcular</button>
+		<input type="submit" value="Calcular">
 
-		<label for="salarioBruto">Salario Bruto Mensual</label>
-		<input type="text" id="salarioBruto" readonly>
+		<span>Salario Bruto Mensual</span>
+		<input type="number" name="salarioBruto" readonly>
 
-		<label for="comision">Comision</label>
-		<input type="text" id="comision" readonly>
+		<span>Comision</span>
+		<input type="number" name="comision" readonly>
 
-		<label for="bono">Bono</label>
-		<input type="text" id="bono" readonly>
+		<span>Bono</span>
+		<input type="number" name="bono" readonly>
 
-		<label for="salarioNeto">Salario Neto Mensual</label>
-		<input type="text" id="salarioNeto" readonly>
+		<span>Salario Neto Mensual</span>
+		<input type="number" name="salarioNeto" readonly>
 	</fieldset>
+</form>
 
+<form id="ej5">
 	<fieldset>
 		<legend>Ejercicio 5</legend>
 
-		<label for="participacion">Participación</label>
-		<input type="text" id="participacion">
+		<span>Participación</span>
+		<input type="number" name="participacion" min="0" max="20" required>
 
-		<label for="primerParcial">Primer Parcial</label>
-		<input type="text" id="primerParcial">
+		<span>Primer Parcial</span>
+		<input type="number" name="primerParcial" min="0" max="20" required>
 
-		<label for="segundoParcial">Segundo Parcial</label>
-		<input type="text" id="segundoParcial">
+		<span>Segundo Parcial</span>
+		<input type="number" name="segundoParcial" min="0" max="20" required>
 
-		<label for="examenFinal">Exámen Final</label>
-		<input type="text" id="examenFinal">
+		<span>Exámen Final</span>
+		<input type="number" name="examenFinal" min="0" max="20" required>
 
-		<button type="button" id="calculo5">Calcular</button>
+		<input type="submit" value="Calcular">
 
-		<label for="notaFinal">Calificación Final</label>
-		<input type="text" id="notaFinal" readonly>
+		<span>Calificación Final</span>
+		<input type="number" name="notaFinal" readonly>
 	</fieldset>
+</form>
 
+<form id="ej6">
 	<fieldset>
 		<legend>Ejercicio 6</legend>
 
-		<label for="num1">Número 1</label>
-		<input type="text" id="num1">
+		<span>Número 1</span>
+		<input type="number" name="num1" required>
 
-		<label for="num2">Número 2</label>
-		<input type="text" id="num2">
+		<span>Número 2</span>
+		<input type="number" name="num2" required>
 
-		<button type="button" id="calculo6">Calcular</button>
+		<input type="submit" value="Calcular">
 
-		<label for="">Cuadrado de la suma</label>
-		<input type="text" id="cuadradoSuma">
+		<span>Cuadrado de la suma</span>
+		<input type="number" name="cuadradoSuma" readonly>
 	</fieldset>
+</form>
 
+<form id="ej7">
 	<fieldset>
 		<legend>Ejercicio 7</legend>
 
-		<label for="totalHoras">Total de Horas</label>
-		<input type="text" id="totalHoras">
+		<span>Total de Horas</span>
+		<input type="number" name="totalHoras" min="1" required>
 
-		<button type="button" id="calculo7">Calcular</button>
+		<input type="submit" value="Calcular">
 
-		<label for="semanas">Semanas</label>
-		<input type="text" id="semanas">
+		<span>Semanas</span>
+		<input type="number" name="semanas" readonly>
 
-		<label for="dias">Días</label>
-		<input type="text" id="dias">
+		<span>Días</span>
+		<input type="number" name="dias" readonly>
 
-		<label for="restoHoras">Horas</label>
-		<input type="text" id="restoHoras">
+		<span>Horas</span>
+		<input type="number" name="restoHoras" readonly>
 	</fieldset>
+</form>
 
+<form id="ej8">
 	<fieldset>
 		<legend>Ejercicio 8</legend>
 
-		<label for="coeA">Coeficiente A</label>
-		<input type="text" id="coeA">
+		<span>Coeficiente A</span>
+		<input type="number" name="coeA" required>
 
-		<label for="coeB">Coeficiente B</label>
-		<input type="text" id="coeB">
+		<span>Coeficiente B</span>
+		<input type="number" name="coeB" required>
 
-		<label for="coeC">Coeficiente C</label>
-		<input type="text" id="coeC">
+		<span>Coeficiente C</span>
+		<input type="number" name="coeC" required>
 
-		<button type="button" id="calculo8">Calcular</button>
+		<input type="submit" value="Calcular">
 
-		<label for="raiz1">Raíz 1</label>
-		<input type="text" id="raiz1">
+		<span>Raíz 1</span>
+		<input type="text" name="raiz1" readonly>
 
-		<label for="raiz2">Raíz 2</label>
-		<input type="text" id="raiz2">
+		<span>Raíz 2</span>
+		<input type="text" name="raiz2" readonly>
 	</fieldset>
 </form>
 </body>
