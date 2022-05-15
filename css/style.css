@@ -14,7 +14,7 @@ h1 {
 
 fieldset {
   display: flex;
-  width: 300px;
+  width: 80%;
   margin: 10px auto;
   flex-direction: column;
   align-self: center;
@@ -42,4 +42,10 @@ button {
 button:hover {
   color: white;
   background-color: gray;
+}
+
+@media (min-width: 769px) {
+  fieldset {
+    width: 500px;
+  }
 }
