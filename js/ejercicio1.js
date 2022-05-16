@@ -1,17 +1,17 @@
+import { gid } from './utils/dom.js';
+import { formInputs } from './utils/form.js';
+import { sum } from './utils/arith.js';
+
 /*
 Ejercicio1: Hacer un programa que calcule e imprima la suma de tres calificaciones.
 */
 
-document.getElementById("calculo1").addEventListener("click",function(){
-	let nota1 = document.getElementById("nota1").value;
-	let nota2 = document.getElementById("nota2").value;
-	let nota3 = document.getElementById("nota3").value;
+gid('ej1').addEventListener('submit', (e) => {
+	e.preventDefault();
 
-	let resultado1 = parseInt(nota1)+parseInt(nota2)+parseInt(nota3);
+	const data = formInputs(e.target);
 
-	if (isNaN(resultado1)) {
-		resultado1 = "";
-	}
+	const notes = Object.values(data).map((n) => Number(n));
 
-	document.getElementById("resultado1").value = resultado1;
+	gid('res1').value = sum(notes);
 });
