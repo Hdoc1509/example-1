@@ -1,17 +1,17 @@
+import { gid } from './utils/dom.js';
+import { formInputs } from './utils/form.js';
+
 /*
 Ejercicio 2: Hacer un programa que calcule e imprima el salario semanal de un
 empleado a partir de sus horas semanales trabajadas y de su salario por hora
 */
 
-document.getElementById("calculo2").addEventListener("click",function(){
-	let horasSemanales = document.getElementById("horasSemanales").value;
-	let pagoHora = document.getElementById("horas").value;
+gid('ej2').addEventListener('submit', (e) => {
+	e.preventDefault();
 
-	let salarioSemanal = parseInt(horasSemanales)*parseInt(pagoHora);
+	const { horasSemanales, pagoHora } = formInputs(e.target);
 
-	if (isNaN(salarioSemanal)) {
-		salarioSemanal = "";
-	}
+	const salarioSemanal = Number(horasSemanales) * Number(pagoHora);
 
-	document.getElementById("salarioSemanal").value = salarioSemanal;
+	gid('res2').value = salarioSemanal;
 });
