@@ -1,3 +1,6 @@
+import { gid } from './utils/dom.js';
+import { formInputs } from './utils/form.js';
+
 /*
 Ejercicio 4: Una compañía de venta de carros usados paga a su personal de ventas
 un salario de $1000 mensuales, más una comisión de $150 por cada carro vendido,
@@ -5,25 +8,23 @@ más el 5% del valor de la venta por carro. Cada mes el capturista de la empresa
 ingresa en la computadora los datos pertinentes. Hacer un programa que calcule e
 imprima el salario mensual de un vendedor dado.
 */
+const SALARIO_BRUTO = 1000;
+const COMISION_POR_CARRO = 150;
+const BONO_VALOR_CARRO = 0.05;
 
-document.getElementById("calculo4").addEventListener("click",function(){
-    let salarioBruto = 1000;
-    let carrosVendidos = document.getElementById("carrosVendidos").value;
-    let valorVentaCarro = document.getElementById("valorVentaCarro").value;
+gid('ej4').addEventListener('submit', (e) => {
+  e.preventDefault();
 
-    let comision = 150*parseInt(carrosVendidos);
-    let bono = 0.05*parseInt(valorVentaCarro);
-    let salarioNeto = salarioBruto+comision+bono;
+  const { carrosVendidos, valorVentaCarro } = formInputs(e.target);
 
-    if (isNaN(salarioNeto)){
-        salarioBruto = "";
-        comision = "";
-        bono = "";
-        salarioNeto = "";
-    }
+  const comision = COMISION_POR_CARRO * Number(carrosVendidos);
+  const bono =
+    BONO_VALOR_CARRO * Number(valorVentaCarro) * Number(carrosVendidos);
 
-    document.getElementById("salarioBruto").value = salarioBruto;
-    document.getElementById("comision").value = comision;
-    document.getElementById("bono").value = bono;
-    document.getElementById("salarioNeto").value = salarioNeto;
+  const salarioNeto = SALARIO_BRUTO + comision + bono;
+
+  e.target.salarioBruto.value = SALARIO_BRUTO;
+  e.target.comision.value = comision;
+  e.target.bono.value = bono;
+  e.target.salarioNeto.value = salarioNeto;
 });

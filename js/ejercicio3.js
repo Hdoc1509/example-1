@@ -8,15 +8,15 @@ tres.
 */
 
 gid('ej3').addEventListener('submit', (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const guillermo = Number(e.target.guillermo.value);
-    const luis = guillermo / 2;
-    const juan = (guillermo + luis) / 2;
+  const guillermo = Number(e.target.guillermo.value);
+  const luis = guillermo / 2;
+  const juan = (guillermo + luis) / 2;
 
-    const total = guillermo + juan + luis;
+  const total = guillermo + juan + luis;
 
-    e.target.luis.value = luis;
-    e.target.juan.value = juan;
-    gid('res3').value = total;
+  e.target.luis.value = luis;
+  e.target.juan.value = juan;
+  gid('res3').value = total;
 });
