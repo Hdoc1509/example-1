@@ -1,5 +1,4 @@
 * {
-  transition: all 0.25s ease;
   box-sizing: border-box;
 }
 
@@ -19,6 +18,10 @@ fieldset {
   flex-direction: column;
   align-self: center;
   border-radius: 10px;
+}
+
+legend {
+  font-weight: bold;
 }
 
 input {
