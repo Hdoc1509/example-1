@@ -1,3 +1,5 @@
+import { gid } from './utils/dom.js';
+
 /*
 Ejercicio 3: Guillermo tiene N dólares. Luis tiene la mitad de lo que posee
 Guillermo. Juan tiene la mitad de lo que poseen Luis y Guillermo juntos. Hacer
@@ -5,22 +7,16 @@ un programa que calcule e imprima la cantidad de dinero que tienen entre los
 tres.
 */
 
-document.getElementById("calculo3").addEventListener("click",function(){
-    let guillermo = document.getElementById("guillermo").value;
-    guillermo = parseInt(guillermo);
+gid('ej3').addEventListener('submit', (e) => {
+    e.preventDefault();
 
-    let luis = guillermo/2;
-    let juan = (luis+guillermo)/2;
+    const guillermo = Number(e.target.guillermo.value);
+    const luis = guillermo / 2;
+    const juan = (guillermo + luis) / 2;
 
-    let total = guillermo+luis+juan;
+    const total = guillermo + juan + luis;
 
-    if (isNaN(total)) {
-        luis = "";
-        juan = "";
-        total = "";
-    }
-
-    document.getElementById("luis").value = luis;
-    document.getElementById("juan").value = juan;
-    document.getElementById("total").value = total;
+    e.target.luis.value = luis;
+    e.target.juan.value = juan;
+    gid('res3').value = total;
 });
