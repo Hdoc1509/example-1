@@ -23,8 +23,8 @@ gid('ej4').addEventListener('submit', (e) => {
 
   const salarioNeto = SALARIO_BRUTO + comision + bono;
 
-  e.target.salarioBruto.value = SALARIO_BRUTO;
-  e.target.comision.value = comision;
-  e.target.bono.value = bono;
-  e.target.salarioNeto.value = salarioNeto;
+  e.target.salarioBruto.value = SALARIO_BRUTO.toFixed(2);
+  e.target.comision.value = comision.toFixed(2);
+  e.target.bono.value = bono.toFixed(2);
+  e.target.salarioNeto.value = salarioNeto.toFixed(2);
 });
