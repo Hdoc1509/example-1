@@ -16,7 +16,7 @@ gid('ej3').addEventListener('submit', (e) => {
 
   const total = guillermo + juan + luis;
 
-  e.target.luis.value = luis;
-  e.target.juan.value = juan;
-  gid('res3').value = total;
+  e.target.luis.value = luis.toFixed(2);
+  e.target.juan.value = juan.toFixed(2);
+  gid('res3').value = total.toFixed(2);
 });
