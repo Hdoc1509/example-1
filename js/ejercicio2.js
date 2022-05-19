@@ -13,5 +13,5 @@ gid('ej2').addEventListener('submit', (e) => {
 
 	const salarioSemanal = Number(horasSemanales) * Number(pagoHora);
 
-	gid('res2').value = salarioSemanal;
+	gid('res2').value = salarioSemanal.toFixed(2);
 });
