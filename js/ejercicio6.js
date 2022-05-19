@@ -1,17 +1,19 @@
+import { gid } from './utils/dom.js';
+import { formInputs } from './utils/form.js';
+
 /*
 Ejercicio 6: Hacer un programa que calcule el cuadrado de una suma.
 (a+b)^2 = a^2 + b^2 + 2ab
 */
 
-document.getElementById("calculo6").addEventListener("click",function(){
-	let n1 = parseInt(document.getElementById("num1").value);
-	let n2 = parseInt(document.getElementById("num2").value);
+const sumaBinomioCuadrado = (n1, n2) => n1 ** 2 + n2 ** 2 + 2 * n1 * n2;
 
-	let cuadradoSuma = Math.pow(n1,2)+Math.pow(n2,2)+2*n1*n2;
+gid('ej6').addEventListener('submit', (e) => {
+	e.preventDefault();
 
-	if (isNaN(cuadradoSuma)) {
-		cuadradoSuma = "";
-	}
+	const { num1, num2 } = formInputs(e.target);
 
-	document.getElementById("cuadradoSuma").value = cuadradoSuma;
+	const cuadradoSuma = sumaBinomioCuadrado(Number(num1), Number(num2));
+
+	gid('res6').value = cuadradoSuma;
 });
